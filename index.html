@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orca - AI Software Consultant for SMB Operations</title>
+    <meta
+      name="description"
+      content="Productized AI consulting for SMB teams that need practical workflows, automations, and internal tools."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <script>
+      try {
+        if (localStorage.getItem("orca-theme") === "dark") {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (_) {}
+    </script>
+    <link rel="icon" href="assets/orca-logo.svg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Orca home">
+        <img src="assets/orca-logo.svg" alt="" width="48" height="48">
+        <span>ORCA</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a class="active" href="#top">Home</a>
+        <a href="#services">Terms & Conditions</a>
+        <a href="#contact">Privacy Policy</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 14.4A8.2 8.2 0 0 1 9.6 3a8.8 8.8 0 1 0 11.4 11.4Z"></path>
+        </svg>
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      </button>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
+      <a href="#top">Home</a>
+      <a href="#services">Terms & Conditions</a>
+      <a href="#contact">Privacy Policy</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-inner reveal">
+          <h1>
+            <span>Orca Builds Software</span>
+            <strong class="word-frame" data-rotator data-words="AI Automations|Internal Tools|Workflow Systems|Faster Teams">AI Automations</strong>
+          </h1>
+
+          <p class="hero-copy">
+            <span class="code-pill">[ orca ]</span> (<em>or-ka</em>), we are a
+            <mark>software consulting company</mark> that designs and builds custom software,
+            <mark>AI automations</mark>, and <mark>internal tools</mark> for growing teams. We turn manual workflows into reliable systems,
+            from strategy and design to launch and ongoing improvement.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Book a Call <span>⌘K</span></a>
+            <a class="button button-secondary" href="#work">See Our Work</a>
+          </div>
+
+          <div class="availability">
+            <span class="status-dot" aria-hidden="true"></span>
+            <p>Open for new software and automation projects.</p>
+          </div>
+
+          <p class="brand-note">Built with the AI and software tools growing teams already trust</p>
+          <div class="logo-marquee" aria-label="Technology partners and platforms Orca builds with">
+            <article class="partner-card partner-proof">
+              <span>Trusted by</span>
+              <strong>operators</strong>
+              <p>building faster software systems</p>
+            </article>
+            <div class="logo-lane">
+              <div class="marquee-track">
+                <div class="marquee-set">
+                  <article class="partner-card partner-logo">Firecrawl</article>
+                  <article class="partner-card partner-logo">OpenAI</article>
+                  <article class="partner-card partner-logo">Supabase</article>
+                  <article class="partner-card partner-logo">Vercel</article>
+                  <article class="partner-card partner-logo">Stripe</article>
+                  <article class="partner-card partner-logo">HubSpot</article>
+                  <article class="partner-card partner-logo">Slack</article>
+                  <article class="partner-card partner-logo">Airtable</article>
+                </div>
+                <div class="marquee-set" aria-hidden="true">
+                  <article class="partner-card partner-logo">Firecrawl</article>
+                  <article class="partner-card partner-logo">OpenAI</article>
+                  <article class="partner-card partner-logo">Supabase</article>
+                  <article class="partner-card partner-logo">Vercel</article>
+                  <article class="partner-card partner-logo">Stripe</article>
+                  <article class="partner-card partner-logo">HubSpot</article>
+                  <article class="partner-card partner-logo">Slack</article>
+                  <article class="partner-card partner-logo">Airtable</article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="section-heading reveal">
+          <h2><mark>Quality Services</mark> We Provide</h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16M4 18h16M7 6v12M17 6v12"></path></svg>
+            </div>
+            <h3>Custom Software Development</h3>
+            <p>We design and build reliable web apps, portals, and software systems around the way your team works.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="M11 17h2"></path></svg>
+            </div>
+            <h3>AI Automation Systems</h3>
+            <p>We turn repetitive work into AI-assisted workflows that reduce manual handoffs and save hours every week.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 20h16M7 16l7-7 3 3-7 7H7zM14 9l2-2 3 3-2 2"></path></svg>
+            </div>
+            <h3>Internal Tools</h3>
+            <p>We build dashboards, admin panels, and operational tools that help teams move faster with less busywork.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4M8 11h6M11 8v6"></path></svg>
+            </div>
+            <h3>Workflow Integrations</h3>
+            <p>We connect your CRM, support desk, spreadsheets, databases, and APIs into systems that actually talk to each other.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 16l5-5 4 4 7-8M15 7h5v5"></path></svg>
+            </div>
+            <h3>Product Strategy</h3>
+            <p>We map the right software plan before building, so your team ships the useful thing first.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 10h10M7 14h6"></path><rect x="4" y="5" width="16" height="14" rx="2"></rect></svg>
+            </div>
+            <h3>Ongoing Support</h3>
+            <p>We keep improving the systems after launch with iteration, automation updates, and practical maintenance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-cta">
+        <div class="split-inner reveal">
+          <div class="split-copy">
+            <p class="system-label">How Orca ships</p>
+            <h2>Orca Builds <mark>24/7</mark>. We Turn Ideas into <mark>Code</mark>.</h2>
+            <p>
+              We partner with teams to solve real operations problems with software and AI. From discovery to deployment,
+              we move fast, communicate clearly, and build systems that last.
+            </p>
+            <div class="split-actions">
+              <a class="button button-primary" href="#contact">Book a Call <span>⌘K</span></a>
+            </div>
+            <ul class="build-points" aria-label="Orca build process">
+              <li>Discovery</li>
+              <li>Automation</li>
+              <li>Development</li>
+              <li>Support</li>
+            </ul>
+          </div>
+
+          <div class="code-stage" aria-label="Animated code generation preview">
+            <div class="dot-globe" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="code-window">
+              <div class="code-topbar" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="code-flow" aria-label="Build workflow">
+                <span>prompt</span>
+                <span>plan</span>
+                <span class="active">code</span>
+                <span>ship</span>
+              </div>
+              <pre class="code-screen"><code data-code-generator></code><span class="code-cursor" aria-hidden="true"></span></pre>
+              <div class="code-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <p>Generating production software...</p>
+                <strong>ETA 00:08</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <div class="section-heading reveal">
+          <h2>
+            <span>Products Built With</span>
+            <strong class="word-frame inline-frame" data-rotator data-words="Love|Care|Speed|Taste">Love</strong>
+          </h2>
+          <p>We make sure to ship products that are not only <mark>functional</mark> but also <mark>beautiful</mark> and <mark>easy to use</mark>.</p>
+        </div>
+
+        <div class="product-showcase reveal" aria-label="Products and software systems Orca builds">
+          <div class="product-rail" aria-hidden="true"></div>
+
+          <article class="product-window product-side product-left">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="product-screen flight-screen">
+              <p>Flight Search</p>
+              <h3>Personalized with AI</h3>
+              <div class="mini-grid">
+                <span>Search</span><span>Compare</span><span>Book</span>
+              </div>
+            </div>
+            <footer>
+              <strong>FlightOps AI</strong>
+              <small>AI search workflow</small>
+            </footer>
+          </article>
+
+          <article class="product-window product-side product-near-left">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="product-screen voice-screen">
+              <p>Voice Assistant</p>
+              <h3>White-label AI platform</h3>
+              <div class="signal-row">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <footer>
+              <strong>VoiceOps Platform</strong>
+              <small>AI calling and support</small>
+            </footer>
+          </article>
+
+          <article class="product-window product-featured">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="product-screen ui-screen">
+              <p>Design System</p>
+              <h3>Your users deserve beautiful UI</h3>
+              <div class="component-grid">
+                <span>Components</span><span>Blocks</span><span>Templates</span>
+              </div>
+            </div>
+            <footer>
+              <strong>Interface System</strong>
+              <small>Product UI and internal tools</small>
+            </footer>
+          </article>
+
+          <article class="product-window product-side product-near-right">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="product-screen trading-screen">
+              <p>Market Intelligence</p>
+              <h3>Algorithmic workflow engine</h3>
+              <div class="chart-line" aria-hidden="true"></div>
+            </div>
+            <footer>
+              <strong>Trading Intelligence</strong>
+              <small>Analytics dashboard</small>
+            </footer>
+          </article>
+
+          <article class="product-window product-side product-right">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="product-screen campaign-screen">
+              <p>Lead Engine</p>
+              <h3>Campaigns without manual handoffs</h3>
+              <div class="campaign-card" aria-hidden="true"></div>
+            </div>
+            <footer>
+              <strong>Campaign OS</strong>
+              <small>Growth automation</small>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <section class="section clients">
+        <div class="clients-inner reveal">
+          <h2>
+            <span>We Help Our Clients</span>
+            <strong class="word-frame inline-frame" data-rotator data-words="Ship|Scale|Grow|Build">Ship</strong>
+          </h2>
+          <p>Our clients are our partners, and we are committed to delivering the best possible results for them.</p>
+          <div class="testimonial-stage" aria-label="Client testimonials">
+            <article class="testimonial-card testimonial-side testimonial-left" data-testimonial-card>
+              <div class="testimonial-avatar" aria-hidden="true">F</div>
+              <blockquote>
+                "Working with Orca gave us practical software our users actually enjoyed. The team cared about functionality,
+                design, and the details that make a system stick."
+              </blockquote>
+              <footer>
+                <strong>Fabian</strong>
+                <span>Founder</span>
+                <small>Tailor Made Times</small>
+              </footer>
+            </article>
+
+            <article class="testimonial-card testimonial-featured is-active" data-testimonial-card>
+              <div class="testimonial-avatar" aria-hidden="true">A</div>
+              <blockquote>
+                "Orca built a custom solution tailored to my business, revolutionizing our vendor management process.
+                Their software led to major cost savings and better day-to-day efficiency."
+              </blockquote>
+              <footer>
+                <strong>Abenezer</strong>
+                <span>Managing Director</span>
+                <small>Dengora Group</small>
+              </footer>
+            </article>
+
+            <article class="testimonial-card testimonial-side testimonial-right" data-testimonial-card>
+              <div class="testimonial-avatar" aria-hidden="true">D</div>
+              <blockquote>
+                "Orca is effective, fast, and easy to work with. The team understood what we needed and delivered a reliable
+                system without dragging the process out."
+              </blockquote>
+              <footer>
+                <strong>Drumify</strong>
+                <span>Founder</span>
+                <small>Music operations platform</small>
+              </footer>
+            </article>
+
+            <div class="testimonial-controls" aria-label="Testimonial controls">
+              <button type="button" data-testimonial-prev aria-label="Previous testimonial">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+              </button>
+              <button type="button" data-testimonial-next aria-label="Next testimonial">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+              </button>
+            </div>
+            <div class="testimonial-progress" aria-hidden="true">
+              <span class="is-active" data-testimonial-dot></span>
+              <span data-testimonial-dot></span>
+              <span data-testimonial-dot></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq">
+        <div class="section-heading reveal">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>How do I start?</summary>
+            <p>Book a call, describe the software or automation you need, and Orca maps the scope, timing, and next steps.</p>
+          </details>
+          <details>
+            <summary>Do you have a referral program?</summary>
+            <p>Yes. Referral details can be discussed during your project onboarding or discovery call.</p>
+          </details>
+          <details>
+            <summary>Can you build using different programming languages?</summary>
+            <p>Yes. The team adapts to the stack that best fits your product, team, and long-term maintenance needs.</p>
+          </details>
+          <details>
+            <summary>How do I receive the completed code?</summary>
+            <p>Completed work is delivered through your preferred repository, with handoff notes and implementation context.</p>
+          </details>
+          <details>
+            <summary>How do we communicate?</summary>
+            <p>Communication typically happens through calls, async updates, and the collaboration tools your team already uses.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-grid reveal">
+          <div class="contact-copy">
+            <h2>Get in touch</h2>
+            <p>If you have any questions regarding our services or need help, fill out the form here. We do our best to respond within 1 business day.</p>
+
+            <div class="contact-methods">
+              <div>
+                <span>Email</span>
+                <a href="mailto:hello@orca.studio">hello@orca.studio</a>
+              </div>
+              <div>
+                <span>Address</span>
+                <p>30 N Gould St Ste N<br>Sheridan, WY 82801</p>
+              </div>
+            </div>
+
+            <div class="socials" aria-label="Social links">
+              <a href="#contact" aria-label="X">X</a>
+              <a href="#contact" aria-label="Instagram">IG</a>
+              <a href="#contact" aria-label="Facebook">FB</a>
+              <a href="#contact" aria-label="TikTok">TT</a>
+              <a href="#contact" aria-label="LinkedIn">IN</a>
+            </div>
+          </div>
+
+          <form class="contact-form">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Your name">
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+            </label>
+            <label>
+              <span>What do you need?</span>
+              <textarea name="message" rows="5" placeholder="Tell us about your product, timeline, and goals"></textarea>
+            </label>
+            <button class="button button-primary" type="submit">Submit</button>
+            <p>By submitting this form, you consent to receive communications from us related to our products and services.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Launch AI Workflows Faster with Orca</p>
+      <span>© 2024 Orca. All rights reserved.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
