@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
 :root {
   color-scheme: light;
   --background: #ffffff;
@@ -11,7 +13,7 @@
   --signal: #f59e0b;
   --success: #34d399;
   --container: 1180px;
-  --shadow: 0 18px 50px rgba(24, 24, 27, 0.08);
+  --shadow: 0 8px 8px rgba(24, 24, 27, 0.08);
   --header-bg: rgba(255, 255, 255, 0.92);
   --toggle-bg: linear-gradient(135deg, #e4e4e7, #fafafa);
   --toggle-border: #d4d4d8;
@@ -28,7 +30,7 @@
   --muted-strong: #27272a;
   --muted-text: #a1a1aa;
   --border: #27272a;
-  --shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+  --shadow: 0 8px 8px rgba(0, 0, 0, 0.42);
   --header-bg: rgba(9, 9, 11, 0.9);
   --toggle-bg: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.35), transparent 19px), #18181b;
   --toggle-border: #3f3f46;
@@ -66,7 +68,34 @@ textarea {
   font: inherit;
 }
 
+::placeholder {
+  color: color-mix(in srgb, var(--foreground) 68%, var(--background));
+  opacity: 1;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p,
+blockquote {
+  text-wrap: pretty;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--signal) 72%, var(--foreground));
+  outline-offset: 4px;
+}
+
 mark {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   background: var(--primary);
   color: var(--primary-foreground);
   padding: 0.05em 0.24em 0.12em;
@@ -117,7 +146,8 @@ mark {
 }
 
 .desktop-nav a:hover,
-.desktop-nav .active {
+.desktop-nav .active,
+.mobile-nav .active {
   border-color: var(--primary);
   color: var(--foreground);
 }
@@ -198,6 +228,13 @@ mark {
 .mobile-nav.is-open {
   display: grid;
   gap: 14px;
+}
+
+.mobile-nav a {
+  width: fit-content;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 3px;
+  color: var(--muted-text);
 }
 
 .section {
@@ -842,14 +879,14 @@ mark {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--background);
-  box-shadow: 0 24px 60px rgba(24, 24, 27, 0.18);
+  box-shadow: 8px 8px 0 color-mix(in srgb, var(--foreground) 10%, transparent);
   transform-origin: center bottom;
   transition: transform 220ms ease, box-shadow 220ms ease, opacity 220ms ease;
 }
 
 .product-window:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 80px rgba(24, 24, 27, 0.24);
+  box-shadow: 12px 12px 0 color-mix(in srgb, var(--foreground) 16%, transparent);
 }
 
 .product-featured {
@@ -1264,15 +1301,16 @@ mark {
 }
 
 .testimonial-progress span {
-  width: 8px;
+  width: 34px;
   height: 8px;
   border-radius: 999px;
   background: var(--border);
-  transition: width 180ms ease, background 180ms ease;
+  transform: scaleX(0.24);
+  transition: transform 180ms ease, background 180ms ease;
 }
 
 .testimonial-progress .is-active {
-  width: 34px;
+  transform: scaleX(1);
   background: var(--signal);
 }
 
@@ -1397,6 +1435,16 @@ details p {
   font-weight: 650;
 }
 
+.contact-form .contact-trap {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .contact-form label span {
   font-size: 0.9rem;
 }
@@ -1423,11 +1471,39 @@ details p {
   width: 100%;
 }
 
+.contact-form .button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
 .contact-form p {
   margin: 0;
   color: var(--muted-text);
   text-align: center;
   font-size: 0.82rem;
+}
+
+.contact-form .form-status {
+  min-height: 1.3em;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.contact-form .form-status.is-error {
+  color: #b91c1c;
+}
+
+.contact-form .form-status.is-success {
+  color: #047857;
+}
+
+[data-theme="dark"] .contact-form .form-status.is-error {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .contact-form .form-status.is-success {
+  color: #6ee7b7;
 }
 
 .footer {
@@ -1451,13 +1527,19 @@ details p {
 }
 
 .reveal {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.has-js .reveal {
   opacity: 0;
   filter: blur(4px);
   transform: translateY(16px);
   transition: opacity 600ms ease, filter 600ms ease, transform 600ms ease;
 }
 
-.reveal.is-visible {
+.has-js .reveal.is-visible {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
@@ -1743,9 +1825,29 @@ details p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+
   .dot-globe,
   .dot-globe span,
-  .code-cursor {
+  .code-cursor,
+  .status-dot::before,
+  .marquee-track {
     animation: none;
+  }
+
+  .has-js .reveal {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
   }
 }

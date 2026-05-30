@@ -1,2 +1,7 @@
 .firecrawl/
 .vercel
+node_modules/
+.next/
+out/
+.env
+.env*.local
